@@ -1,0 +1,10 @@
+name: 'ChangeFilesTest'
+description: 'Changes content of .liquid Shopify theme files'
+inputs:
+  url:  # id of input
+    description: 'What url to set'
+    required: true
+    default: 'https://my-default-url.com'
+runs:
+  using: 'node20'
+  main: 'index.js'
