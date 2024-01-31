@@ -27,7 +27,7 @@ async function run() {
 
     const url = (core.getInput('url') === '') ? "my-undefined-url.com" : core.getInput('url');
 
-    let htmlGlob = '**.liquid';
+    let htmlGlob = '**/*.liquid';
 
     if (htmlGlob) {
       const globber = await glob.create(htmlGlob);
