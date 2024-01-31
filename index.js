@@ -50,7 +50,7 @@ function rewriteSingleFile(filePath, url) {
   //     .replace(/<base ([^>]*href=["'])([^'"]*)(["'][^>]*)>/, `<base $1${url}$3>`);
 
   // rewrite head
-  var updatedText = updatedText.replace('</head>', getHeadClientHintMarkup(url));
+  var updatedText = originalText.replace('</head>', getHeadClientHintMarkup(url));
 
   if (originalText !== updatedText) {
     fs.writeFileSync(filePath, updatedText);  //+'.out'
